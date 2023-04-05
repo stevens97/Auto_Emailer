@@ -25,7 +25,8 @@ In the case where data is available from a SQL database:
 # ---------------------------------------------------------
 
 def SETUP_CONNECTION(DRIVER, SERVER, DATABASE, USERNAME, PASSWORD):
-  
+    
+    # Setup your database connection here using the relevant server and database details:
     CONNECTION = pyodbc.connect(
         'DRIVER=' + DRIVER + ';SERVER=' + SERVER + ';DATABASE=' + DATABASE + ';UID=' + USERNAME + ';PWD=' + PASSWORD + ';Authentication=ActiveDirectoryPASSWORD')
 
@@ -40,7 +41,8 @@ def GET_DATA(CONNECTION):
     print('\n\n')
     print('Fetching data...')
     print('\n\n')
-
+    
+    # SQL Query for fetching data from database.
     QUERY = """
     SELECT * FROM <TABLE>
     """
@@ -50,11 +52,17 @@ def GET_DATA(CONNECTION):
 
     return DF
 
+'''
+If you have data from a local database, run these:
+'''
 #CONNECTION = SETUP_CONNECTION()
-#DATA = GET_DATA(CONNECTION)
+#data = GET_DATA(CONNECTION)
 
-# Generate sample data to show functionality:
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# Demonstration
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+# Generate sample data to show functionality of this program.
 data = pd.DataFrame({'Id': [1,2,3,4,5], 'Check': [True, False, True, False, False] })
 
 # ---------------------------------------------------------
