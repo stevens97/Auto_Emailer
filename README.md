@@ -1,4 +1,4 @@
-# Win32_Emailer
+# Win32 Emailer
 
 What this program does:
 ========================================
