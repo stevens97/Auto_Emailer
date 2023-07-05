@@ -137,11 +137,13 @@ def SEND(info):
 # Send email based on some condition within the dataset.
 # ---------------------------------------------------------
 
-start_time = time.time()
-for i in range(len(data)):
-    # Some condition
-    if data['Check'][i] == True:
-        EMAIL = GENERATE_EMAIL(data['Id'][i])
-        # Send email
-        SEND(EMAIL)
-        print("--- %s seconds ---" % (time.time() - start_time))
+if __name__ == "__main__":
+    
+    start_time = time.time()
+    for i in range(len(data)):
+        # Some condition
+        if data['Check'][i] == True:
+            EMAIL = GENERATE_EMAIL(data['Id'][i])
+            # Send email
+            SEND(EMAIL)
+            print("--- %s seconds ---" % (time.time() - start_time))
