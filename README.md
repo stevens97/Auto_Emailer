@@ -16,4 +16,4 @@ With the following external libraries:
 - pandas
 - pyodbc (if you want to read data from a SQL database)
 - time
-- win32.com.cleint (for emailing over Outlook via Python)
+- win32.com.client (for emailing over Outlook via Python)
